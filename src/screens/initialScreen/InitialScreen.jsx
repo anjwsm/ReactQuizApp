@@ -83,7 +83,7 @@ export const InitialScreen = ({ setStartQuiz, isRetakeQuiz }) => {
                     onClick={() => setClicked(true)}
                     className={appStyles.fadeInLeft}
                   >
-                    <span>Enter the Quiz Arena! </span>
+                    <span>Let's get started with Quiz! </span>
                     <AiOutlineArrowRight />
                   </button>
                 }

@@ -1,4 +1,9 @@
 
+1. Change text from ' enter quize arena!  ' to -> 'Let get started with QUiz'
+2. Add one more question ' Wich one of the following is a aray method : Optiosn s: -< map, filter , reduce , any>
+3. Change  the theme yellow white-> to black and orange  
+4. Implenetm skip or  next  feature in quiz .
+5. Add 20 js quesitons and radnomly put any 5 in any quiz(currenlty there are 4 question) .
 
 <h1 align="center">Responsive Quiz Website Using React</h1>
 <h4>This readme file provides an overview of the contents and structure of my quiz website.</h4>
