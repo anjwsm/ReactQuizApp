@@ -18,7 +18,7 @@ export const ReviewScreen = ({ setIsRetake }) => {
             ))}
           </div>
           <div className={styles.column}>
-            {questions.slice(2, 4).map((data, index) => {
+            {questions.slice(2).map((data, index) => {
               return <Question index={index + 2} data={data} />;
             })}
           </div>

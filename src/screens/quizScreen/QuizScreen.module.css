@@ -9,12 +9,12 @@
 
 .quizScreenWrapper {
   composes: wrapperStyling;
-  background: linear-gradient(260deg, #fff 40%, #ffd700 40%);
+  background: linear-gradient(260deg, black 40%, orange 40%);
 }
 
 .resultWrapper {
   composes: wrapperStyling;
-  background: linear-gradient(110deg, #fff 60%, #ffd700 60%);
+  background: linear-gradient(110deg, black 60%, orange 60%);
 }
 
 /* Quiz Card Screen Styling */
@@ -22,6 +22,7 @@
   max-width: 50%;
   overflow-wrap: break-word;
   padding: 0em 2em;
+  color: #fff;
 }
 
 .fontStyling {
@@ -44,6 +45,7 @@
   overflow-wrap: break-word;
   font-size: 26px;
   line-height: 1.5;
+  
 }
 
 .optionsDiv {
@@ -67,7 +69,7 @@
 
 .selectedAnswer {
   composes: optionStyling;
-  background-color: #fff;
+  background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -86,19 +88,19 @@
   padding: 0px 20px;
   text-align: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  color: #000;
+  color: white;
 }
 
 .disabledDiv {
   composes: buttonStyling;
-  background-color: #ffd700;
-  border: 1px solid #ffd700;
+  background-color: orange;
+  border: 1px solid orange;
 }
 
 .nextBtnDiv {
   composes: buttonStyling;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: black;
+  border: 1px solid black;
 }
 
 /* Result Screen Styling */
@@ -125,11 +127,13 @@
   align-items: center;
   justify-content: center;
   padding: 1em 0em;
+  color :#fff;
 }
 
 .resultChart {
   max-width: 30%;
   margin: 0em 1em;
+  
 }
 
 .infoStyling {
@@ -155,24 +159,24 @@
 
 .reviewBtn {
   composes: buttonStyling;
-  background-color: #ffd700;
-  border: 1px solid #ffd700;
+  background-color: orange;
+  border: 1px solid orange;
   margin: 1em 1em 1em 0em;
 }
 
 .reviewBtn:hover {
-  background-color: #fff;
+  background-color: black;
 }
 
 .retakeBtn {
   composes: buttonStyling;
-  background-color: #fff;
-  border: 1px solid #fff;
+  background-color: black;
+  border: 1px solid black;
   margin: 1em 1em 1em 0em;
 }
 
 .retakeBtn:hover {
-  border: 1px solid #ffd700;
+  border: 1px solid orange;
 }
 
 .btnDiv {

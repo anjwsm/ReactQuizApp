@@ -7,8 +7,7 @@ import { InfoToolTip } from "../../components/toolTip/InfoToolTip";
 import cx from "classnames";
 
 export const InitialScreen = ({ setStartQuiz, isRetakeQuiz }) => {
-  const textToDisplay = useMemo(
-    () => [
+  const textToDisplay =  [
       <div key="1">
         <p className={styles.numberStyling}>1</p>
         <p className={styles.textStyling}>Ready</p>
@@ -21,9 +20,8 @@ export const InitialScreen = ({ setStartQuiz, isRetakeQuiz }) => {
         <p className={styles.numberStyling}>3</p>
         <p className={styles.textStyling}>Quiz</p>
       </div>
-    ],
-    []
-  );
+    ];
+  
 
   const [click, setClicked] = useState(false);
   const [displayText, setDisplayText] = useState(textToDisplay[0]);
@@ -99,7 +97,7 @@ export const InitialScreen = ({ setStartQuiz, isRetakeQuiz }) => {
               <h3>{instructionsData?.title}:</h3>
               <ol>
                 {instructionsData?.data?.map((instruction, index) => {
-                  return <li key={index}>{instruction}</li>;
+                   return <li key={index}>{instruction}</li>;
                 })}
               </ol>
             </div>

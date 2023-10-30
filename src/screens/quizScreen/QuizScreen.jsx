@@ -22,6 +22,8 @@ export const QuizScreen = ({ setIsRetake, setIsReview }) => {
   const { questions } = quizData;
   const { question, choices, correctAnswer } = questions[activeQuestion];
 
+  console.log(question,questions,activeQuestion,'debug')
+
   const onClickNext = () => {
     setSelectedAnswerIndex(null);
     setResult((prev) =>
@@ -40,6 +42,16 @@ export const QuizScreen = ({ setIsRetake, setIsReview }) => {
       setShowResult(true);
     }
   };
+  function onClickSkip(){
+    if ( activeQuestion <= 3){
+      setActiveQuestion(activeQuestion+1)
+    }
+    else {
+    setActiveQuestion(0);
+    setShowResult(true);
+  }
+    
+  }
 
   const onAnswerSelected = (answer, index) => {
     setSelectedAnswerIndex(index);
@@ -102,6 +114,8 @@ export const QuizScreen = ({ setIsRetake, setIsReview }) => {
             >
               {activeQuestion === questions.length - 1 ? "Finish" : "Next"}
             </button>
+            <button className={styles.disabledDiv}
+            onClick = {onClickSkip}>Skip</button>
           </div>
         </div>
       ) : (
@@ -145,8 +159,8 @@ export const QuizScreen = ({ setIsRetake, setIsReview }) => {
                       text={`${percentage}%`}
                       backgroundPadding={6}
                       styles={buildStyles({
-                        textColor: "#000",
-                        pathColor: "#ffd700",
+                        textColor: "#fff",
+                        pathColor: "#ffa500",
                         trailColor: "#f6f6f6"
                       })}
                     />

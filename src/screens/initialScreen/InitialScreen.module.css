@@ -8,7 +8,7 @@
 }
 
 .countDownWrapper {
-  background: linear-gradient(120deg, #fff 40%, yellow 40%);
+  background: linear-gradient(120deg, #fff 40%, #ffa500 40%);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -28,16 +28,16 @@
 
 .leftDiv {
   composes: boxStyling;
-  background-color: #ffd700;
-  color: #000;
+  background-color: orange;
+  color:white;
   justify-content: flex-end;
   padding-left: 1em;
 }
 
 .rightDiv {
   composes: boxStyling;
-  background-color: #fff;
-  color: #000;
+  background-color: black;
+  color: white;
   justify-content: flex-start;
   padding-right: 1em;
 }
@@ -50,16 +50,16 @@
 }
 
 .btnDiv button {
-  background-color: #fff;
+  background-color:black;
   border-radius: 10px;
-  border: 1px solid #000;
-  color: #000;
+  border: 1px solid white;
+  color: white;
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
   font-family: "Castoro", cursive;
   line-height: 48px;
-  width: 250px;
+  width: 300px;
   padding: 0px 20px;
   display: flex;
   flex-direction: row;
@@ -68,13 +68,14 @@
 }
 
 .btnDiv button:hover {
-  background-color: #ffd700;
-  border: 1px solid #000;
-  color: #000;
+  background-color: orange;
+  border: 1px solid white;
+  color:white;
 }
 
 .btnDiv button span {
   padding-right: 10px;
+
 }
 
 /* Counter Screen Styling */
@@ -95,7 +96,7 @@
 
 .counterInfoStyling {
   font-family: "Castoro", cursive;
-  color: #000;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
