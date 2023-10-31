@@ -3,6 +3,13 @@ import styles from "./App.module.css";
 import { InitialScreen } from "./screens/initialScreen/InitialScreen";
 import { QuizScreen } from "./screens/quizScreen/QuizScreen";
 import { ReviewScreen } from "./screens/reviewScreen/ReviewScreen";
+import {quizData} from './utils/quizData'
+
+let ran1 =Math.round(Math.random()*20);
+let ran2 =Math.round(Math.random()*16);
+let ran3 =Math.round(Math.random()*20);
+let ran4 =Math.round(Math.random()*10);
+let ran5 =Math.round(Math.random()*11);
 
 export default function App() {
   const [isShowQuiz, setIsShowQuiz] = useState(false);
@@ -23,6 +30,9 @@ export default function App() {
     setIsReviewQuiz(isReviewQuiz);
   };
 
+
+  let questions =[quizData.questions[ran1],quizData.questions[ran2],quizData.questions[ran3],quizData.questions[ran4],quizData.questions[ran5] ];
+
   return (
     <div className={styles.appWrapper}>
       {!isShowQuiz ? (
@@ -31,9 +41,10 @@ export default function App() {
           isRetakeQuiz={isRetakeQuiz}
         />
       ) : isReviewQuiz ? (
-        <ReviewScreen setIsRetake={handleRetakeQuiz} />
+        <ReviewScreen setIsRetake={handleRetakeQuiz} questions ={questions} />
       ) : (
         <QuizScreen
+         questions ={questions}
           setIsRetake={handleRetakeQuiz}
           setIsReview={handleReviewQuiz}
         />

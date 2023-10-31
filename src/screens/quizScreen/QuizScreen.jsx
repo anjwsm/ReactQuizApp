@@ -8,7 +8,8 @@ import "react-circular-progressbar/dist/styles.css";
 import { InfoToolTip } from "../../components/toolTip/InfoToolTip";
 import cx from "classnames";
 
-export const QuizScreen = ({ setIsRetake, setIsReview }) => {
+export const QuizScreen = (props) => {
+  const { setIsRetake, setIsReview ,questions }=props
   const [activeQuestion, setActiveQuestion] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(false);
   const [showResult, setShowResult] = useState(false);
@@ -19,8 +20,8 @@ export const QuizScreen = ({ setIsRetake, setIsReview }) => {
     wrongAnswers: 0
   });
 
-  const { questions } = quizData;
-  const { question, choices, correctAnswer } = questions[activeQuestion];
+  // const { questions } = quizData;
+  const { question, choices, correctAnswer } =questions[activeQuestion];
 
   console.log(question,questions,activeQuestion,'debug')
 

@@ -5,8 +5,8 @@ import { InfoToolTip } from "../../components/toolTip/InfoToolTip";
 import { Question } from "../../components/question/Question";
 import cx from "classnames";
 
-export const ReviewScreen = ({ setIsRetake }) => {
-  const { questions } = quizData;
+export const ReviewScreen = ({ setIsRetake,questions }) => {
+  // const { questions } = quizData;
 
   return (
     <div className={cx(appStyles.fadeInRight, styles.reviewScreenWrapper)}>
